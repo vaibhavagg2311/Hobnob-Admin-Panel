@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hobnob | Admin</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="css/table.css">
+    <link rel="stylesheet" href="css/user.css">
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.6.4/css/buttons.dataTables.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+        <!-- Left navbar links -->
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+            </li>
+            <!--            <li class="nav-item d-none d-sm-inline-block">-->
+            <!--                <a href="index.html" class="nav-link">Home</a>-->
+            <!--            </li>-->
+
+        </ul>
+
+        <!-- SEARCH FORM -->
+        <form class="form-inline ml-3">
+            <div class="input-group input-group-sm">
+                <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                <div class="input-group-append">
+                    <button class="btn btn-navbar" type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <!-- Right navbar links -->
+        <ul class="navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+                    <i class="fas fa-th-large"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+        <!-- Brand Logo -->
+        <a href="index3.html" class="brand-link">
+            <img src="img/hobnob.jpg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+            <span class="brand-text font-weight-light">Hobnob</span>
+        </a>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <!-- Sidebar user panel (optional) -->
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+                <div class="image">
+                    <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+                </div>
+                <div class="info">
+                    <a href="#" class="d-block">Shubham Mittal</a>
+                </div>
+            </div>
+
+            <!-- Sidebar Menu -->
+            <nav class="mt-2">
+                <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                    <!-- Add icons to the links using the .nav-icon class
+                         with font-awesome or any other icon font library -->
+                    <li class="nav-item">
+                        <a href="user.html" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>User</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="branding.html" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>Branding</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="finance.html" class="nav-link">
+                            <i class="nav-icon fas fa-file"></i>
+                            <p>Finance</p>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- /.sidebar-menu -->
+        </div>
+        <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+            <div class="container-fluid">
+                <div class="row mb-2">
+                    <div class="col-sm-6">
+                        <h1 class="m-0 text-dark" style="font-family: 'Vollkorn SC', serif; font-size: 27px;">User -Add New User</h1>
+                    </div><!-- /.col -->
+
+                </div><!-- /.row -->
+            </div><!-- /.container-fluid -->
+        </div>
+        <!-- /.content-header -->
+
+        <!-- Main content -->
+        <section class="content">
+            <div class="container-fluid" style="background-color: white;padding:25px;">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">First Name</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Last Name</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Phone Number</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-sm-10">
+
+                            <select multiple data-multi-select-plugin >
+                                <option value="Select Your Hobbies" selected>Select Your Hobbies</option>
+                                <option value="Sports">Sports</option>
+                                <option value="Blogging">Blogging </option>
+                                <option value="Volunteering">Volunteering</option>
+                                <option value="Traveling">Traveling</option>
+                                <option value="Art & Design">Art & Design</option>
+                                <option value="Music">Music</option>
+                                <option value="Reading">Reading</option>
+                                <option value="Video Gaming">Video Gaming</option>
+                                <option value="Strategic Gaming">Strategic Gaming</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Indoors">Indoors	</option>
+                                <option value="3D printing">3D printing</option>
+                                <option value="Acrobatics">Acrobatics</option>
+                                <option value="Acting">Acting</option>
+                                <option value="Amateur radio">Amateur radio</option>
+                                <option value="Animation">Animation</option>
+                                <option value="Aquascaping">Aquascaping</option>
+                                <option value="Astrology">Astrology</option>
+                                <option value="Astronomy">Astronomy</option>
+                                <option value="Baking">Baking</option>
+                                <option value="Baton twirling">Baton twirling</option>
+                                <option value="Blogging">Blogging</option>
+                                <option value="Building">Building</option>
+                                <option value="Board/tabletop games">Board/tabletop games</option>
+                                <option value="Book discussion clubs">Book discussion clubs</option>
+                                <option value="Book restoration">Book restoration</option>
+                                <option value="Bowling">Bowling</option>
+                                <option value="Brazilian jiu-jitsu">Brazilian jiu-jitsu</option>
+                                <option value="Breadmaking">Breadmaking</option>
+                                <option value="Bullet journaling">Bullet journaling</option>
+                                <option value="Cabaret">Cabaret</option>
+                                <option value="Calligraphy">Calligraphy</option>
+                                <option value="Candle making">Candle making</option>
+                                <option value="Candy making">Candy making</option>
+                                <option value="Car fixing & building">Car fixing & building</option>
+                                <option value="Card games">Card games</option>
+                                <option value="Cheesemaking">Cheesemaking</option>
+                                <option value="Cleaning">Cleaning</option>
+                                <option value="Clothes Making">Clothes Making</option>
+                                <option value="Coffee roasting">Coffee roasting</option>
+                                <option value="Collecting">Collecting</option>
+                                <option value="Coloring">Coloring</option>
+                                <option value="Computer programming">Computer programming</option>
+                                <option value="Confectionery">Confectionery</option>
+                                <option value="Cooking">Cooking</option>
+                                <option value="Cosplaying">Cosplaying</option>
+                                <option value="Couponing">Couponing</option>
+                                <option value="Craft">Craft</option>
+                                <option value="Creative writing">Creative writing</option>
+                                <option value="Crocheting">Crocheting</option>
+                                <option value="Cross-stitch">Cross-stitch</option>
+                                <option value="Crossword puzzles">Crossword puzzles</option>
+                                <option value="Cryptography">Cryptography</option>
+                                <option value="Cue sports">Cue sports</option>
+                                <option value="Dance">Dance</option>
+                                <option value="Digital arts">Digital arts</option>
+                                <option value="Distro Hopping">Distro Hopping</option>
+                                <option value="DJing">DJing</option>
+                                <option value="Do it yourself">Do it yourself</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Drawing">Drawing</option>
+                                <option value="Drink mixing">Drink mixing</option>
+                                <option value="Drinking">Drinking</option>
+                                <option value="Electronic games">Electronic games</option>
+                                <option value="Electronics">Electronics</option>
+                                <option value="Embroidery">Embroidery</option>
+                                <option value="Experimenting">Experimenting</option>
+                                <option value="Fantasy sports">Fantasy sports</option>
+                                <option value="Fashion">Fashion</option>
+                                <option value="Fashion design">Fashion design</option>
+                                <option value="Fishkeeping">Fishkeeping</option>
+                                <option value="Filmmaking">Filmmaking</option>
+                                <option value="Flower arranging">Flower arranging</option>
+                                <option value="Fly tying">Fly tying</option>
+                                <option value="Foreign language learning">Foreign language learning</option>
+                                <option value="Furniture building">Furniture building</option>
+                                <option value="Gaming">Gaming</option>
+                                <option value="Genealogy">Genealogy</option>
+                                <option value="Gingerbread house making">Gingerbread house making</option>
+                                <option value="Glassblowing">Glassblowing</option>
+                                <option value="Graphic design">Graphic design</option>
+                                <option value="Gunsmithing">Gunsmithing</option>
+                                <option value="Gymnastics">Gymnastics</option>
+                                <option value="Hacking">Hacking</option>
+                                <option value="Herp keeping">Herp keeping</option>
+                                <option value="Home improvement">Home improvement</option>
+                                <option value="Homebrewing">Homebrewing</option>
+                                <option value="Houseplant care">Houseplant care</option>
+                                <option value="Hula hooping">Hula hooping</option>
+                                <option value="Humor">Humor</option>
+                                <option value="Hydroponics">Hydroponics</option>
+                                <option value="Ice skating">Ice skating</option>
+                                <option value="Jewelry making">Jewelry making</option>
+                                <option value="Jigsaw puzzles">Jigsaw puzzles</option>
+                                <option value="Journaling">Journaling</option>
+                                <option value="Juggling">Juggling</option>
+                                <option value="Karaoke">Karaoke</option>
+                                <option value="Karate">Karate</option>
+                                <option value="Kendama">Kendama</option>
+                                <option value="Knife making">Knife making</option>
+                                <option value="Knitting">Knitting</option>
+                                <option value="Knot tying">Knot tying</option>
+                                <option value="Kombucha brewing">Kombucha brewing</option>
+                                <option value="Lace making">Lace making</option>
+                                <option value="Lapidary">Lapidary</option>
+                                <option value="Leather crafting">Leather crafting</option>
+                                <option value="Lego building">Lego building</option>
+                                <option value="Lock picking">Lock picking</option>
+                                <option value="Listening to music">Listening to music</option>
+                                <option value="Listening to podcasts">Listening to podcasts</option>
+                                <option value="Machining">Machining</option>
+                                <option value="Macrame">Macrame</option>
+                                <option value="Magic">Magic</option>
+                                <option value="Makeup">Makeup</option>
+                                <option value="Mazes (indoor/outdoor)">Mazes (indoor/outdoor)</option>
+                                <option value="Metalworking">Metalworking</option>
+                                <option value="Model building">Model building</option>
+                                <option value="Model engineering">Model engineering</option>
+                                <option value="Nail art">Nail art</option>
+                                <option value="Needlepoint">Needlepoint</option>
+                                <option value="Origami">Origami</option>
+                                <option value="Painting">Painting</option>
+                                <option value="Palmistry">Palmistry</option>
+                                <option value="Pet adoption & fostering">Pet adoption & fostering</option>
+                                <option value="Philately">Philately</option>
+                                <option value="Photography">Photography</option>
+                                <option value="Practical jokes">Practical jokes</option>
+                                <option value="Pressed flower craft">Pressed flower craft</option>
+                                <option value="Playing musical instruments">Playing musical instruments</option>
+                                <option value="Poi">Poi</option>
+                                <option value="Pottery">Pottery</option>
+                                <option value="Powerlifting">Powerlifting</option>
+                                <option value="Puzzles">Puzzles</option>
+                                <option value="Quilling">Quilling</option>
+                                <option value="Quilting">Quilting</option>
+                                <option value="Quizzes">Quizzes</option>
+                                <option value="Radio-controlled model">Radio-controlled model</option>
+                                <option value="Rail transport modeling">Rail transport modeling</option>
+                                <option value="Rapping">Rapping</option>
+                                <option value="Reading">Reading</option>
+                                <option value="Refinishing">Refinishing</option>
+                                <option value="Reiki">Reiki</option>
+                                <option value="Robot combat">Robot combat</option>
+                                <option value="Rubik's Cube">Rubik's Cube</option>
+                                <option value="Scrapbooking">Scrapbooking</option>
+                                <option value="Sculpting">Sculpting</option>
+                                <option value="Sewing">Sewing</option>
+                                <option value="Shoemaking">Shoemaking</option>
+                                <option value="Singing">Singing</option>
+                                <option value="Sketching">Sketching</option>
+                                <option value="Skipping rope">Skipping rope</option>
+                                <option value="Slot car">Slot car</option>
+                                <option value="Soapmaking">Soapmaking</option>
+                                <option value="Social media">Social media</option>
+                                <option value="Spreadsheets">Spreadsheets</option>
+                                <option value="Stand-up comedy">Stand-up comedy</option>
+                                <option value="Stamp collecting">Stamp collecting</option>
+                                <option value="Table tennis">Table tennis</option>
+                                <option value="Tarot">Tarot</option>
+                                <option value="Taxidermy">Taxidermy</option>
+                                <option value="Thrifting">Thrifting</option>
+                                <option value="Video editing">Video editing</option>
+                                <option value="Video game developing">Video game developing</option>
+                                <option value="Video gaming">Video gaming</option>
+                                <option value="Watching movies">Watching movies</option>
+                                <option value="Watching television">Watching television</option>
+                                <option value="Videography">Videography</option>
+                                <option value="Virtual reality">Virtual reality</option>
+                                <option value="Waxing">Waxing</option>
+                                <option value="Weaving">Weaving</option>
+                                <option value="Weight training">Weight training</option>
+                                <option value="Welding">Welding</option>
+                                <option value="Whittling">Whittling</option>
+                                <option value="Wikipedia editing">Wikipedia editing</option>
+                                <option value="Winemaking">Winemaking</option>
+                                <option value="Wood carving">Wood carving</option>
+                                <option value="Woodworking">Woodworking</option>
+                                <option value="Worldbuilding">Worldbuilding</option>
+                                <option value="Writing">Writing</option>
+                                <option value="Word searches">Word searches</option>
+                                <option value="Yo-yoing">Yo-yoing</option>
+                                <option value="Yoga">Yoga</option>
+                                <option value="Zumba">Zumba</option>
+                            </select>
+
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+
+                        </div>
+                        <div class="form-group col-md-6">
+                            <button type="button" class="btn btn-outline-secondary" style="float: right; width: 170px; height: 50px;">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+
+
+
+            </div><!-- /.container-fluid -->
+        </section>
+        <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+    <footer class="main-footer">
+        <strong>Copyright &copy; 2020 <a href="https://thehobnob.in">Hobnob</a>.</strong>
+        All rights reserved.
+        <div class="float-right d-none d-sm-inline-block">
+            <b>Version</b> 3.1.0-pre
+        </div>
+    </footer>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-light">
+        <!-- Control sidebar content goes here -->
+        <table id="example" class="usertable" style="width:100%">
+            <thead>
+            <tr>
+                <th>Customer Id</th>
+                <th>Customer Name</th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr>
+                <td>Shubhammittal1499@gmail.com</td>
+                <td>Shubham</td>
+
+            </tr>
+
+            <tr>
+                <td>mittalshubham99@gmail.com</td>
+                <td>Shubham</td>
+
+            </tr>
+
+            </tbody>
+
+        </table>
+
+    </aside>
+    <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+
+<script src="dist/js/adminlte.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+</body>
+</html>
